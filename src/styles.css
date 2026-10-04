@@ -111,6 +111,195 @@ h1 {
   display: grid;
   grid-template-columns: minmax(280px, 360px) 1fr;
   gap: 18px;
+  align-items: start;
+}
+
+.side {
+  display: grid;
+  gap: 18px;
+}
+
+.banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  border-radius: 8px;
+  padding: 12px 14px;
+  margin-bottom: 14px;
+  font-size: 14px;
+}
+
+.banner ul {
+  margin: 8px 0 0;
+  padding-left: 18px;
+}
+
+.banner.info {
+  background: #fff7e8;
+  border: 1px solid #f0d9a8;
+  color: #7a5a17;
+}
+
+.banner.ok {
+  background: #e8f4ef;
+  border: 1px solid #bfe3d2;
+  color: #14724f;
+}
+
+.metric strong.alarm {
+  color: #c84b31;
+}
+
+.hint {
+  margin: 0;
+  font-size: 13px;
+  color: #176b87;
+  background: #eef5fb;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+/* 校验状态徽章 */
+.verify {
+  border-radius: 999px;
+  padding: 6px 9px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.verify.ok { background: #e8f4ef; color: #14724f; }
+.verify.tampered { background: #fbe4de; color: #b03a22; }
+.verify.broken { background: #fdeed3; color: #9a6b12; }
+.verify.unlinked { background: #eceff3; color: #5b667a; }
+
+/* 记录卡片按校验状态描边 */
+.record.ok { border-left: 4px solid #2e9e76; }
+.record.tampered { border-left: 4px solid #c84b31; background: #fff8f6; }
+.record.broken { border-left: 4px solid #d99a2b; background: #fffcf5; }
+.record.unlinked { border-left: 4px solid #9aa5b5; }
+
+.break-detail {
+  margin: 0 0 12px;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fbe4de;
+  color: #8f2f1c;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.edit-box {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+/* 凭证链视图 */
+.chains {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.chain {
+  border: 1px solid #dfe7f1;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfe;
+}
+
+.chain-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.chain-head code {
+  font-size: 12px;
+  color: #536078;
+  background: #eef2f7;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.chain-nodes {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.chain-node {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 12px;
+  border-radius: 6px;
+  padding: 5px 8px;
+  border: 1px solid #cfd8e5;
+  background: #fff;
+  color: #445069;
+}
+
+.chain-node.ok { border-color: #2e9e76; color: #14724f; }
+.chain-node.tampered { border-color: #c84b31; color: #b03a22; background: #fff3f0; }
+.chain-node.broken { border-color: #d99a2b; color: #9a6b12; background: #fffaf0; }
+.chain-node.unlinked { border-style: dashed; color: #69758c; }
+.chain-node.frozen { box-shadow: inset 0 0 0 1px #9aa5b5; }
+
+.chain-link {
+  color: #2e9e76;
+  font-weight: 700;
+}
+
+.chain-link.bad {
+  color: #c84b31;
+  font-size: 12px;
+  border: 1px dashed #c84b31;
+  border-radius: 6px;
+  padding: 2px 6px;
+}
+
+/* 离线调价单 */
+.orders {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.orders-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.orders-head h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.order {
+  border: 1px solid #dfe7f1;
+  border-radius: 8px;
+  padding: 12px;
+  background: #fbfcfe;
+}
+
+.order.held {
+  border-color: #d99a2b;
+  background: #fffcf5;
+}
+
+.merge-error {
+  margin: 0 0 10px;
+  font-size: 13px;
+  color: #9a6b12;
+  background: #fdeed3;
+  border-radius: 8px;
+  padding: 8px 10px;
+  line-height: 1.6;
 }
 
 .panel, .list-panel {
